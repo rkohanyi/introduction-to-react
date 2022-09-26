@@ -1,6 +1,4 @@
-import './UserDetails.css'
-
-function UserDetails({ id, name, username, email }) {
+function UserDetails({ name, username, email }) {
     return <div>
         <h2>
             <span>{name}</span>

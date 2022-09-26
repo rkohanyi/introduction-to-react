@@ -1,9 +1,9 @@
 import './App.css'
-import UserDetails from './components/UserDetails'
+import UserList from './components/UserList'
 import users from './data/Users'
 
 function App() {
-  return <UserDetails {...users[0]} />
+  return <UserList users={users} />
 }
 
 export default App
