@@ -4,14 +4,15 @@ import UserDetails from "./UserDetails"
 function UserList({ users }) {
     const [selectedId, setSelectedId] = useState(null)
 
-    return <ol>
-        {users.map(user => <li key={user.id}>
+    return <>
+        {users.map(user =>
             <UserDetails
+                key={user.id}
                 selected={user.id === selectedId}
                 handleSelected={setSelectedId}
                 {...user} />
-        </li>)}
-    </ol>
+        )}
+    </>
 }
 
 export default UserList
