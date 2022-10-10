@@ -4,12 +4,16 @@ import UserDetails from "./UserDetails"
 function UserList({ users }) {
     const [selectedId, setSelectedId] = useState(null)
 
+    function handleSelected(id) {
+        setSelectedId(id)
+    }
+
     return <>
         {users.map(user =>
             <UserDetails
                 key={user.id}
                 selected={user.id === selectedId}
-                handleSelected={setSelectedId}
+                handleSelected={handleSelected}
                 {...user} />
         )}
     </>
