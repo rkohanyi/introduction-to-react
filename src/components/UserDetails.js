@@ -1,14 +1,7 @@
-import { useState } from "react"
 import './UserDetails.css'
 
-function UserDetails({ name, username, email }) {
-    const [selected, setSelected] = useState(false)
-
-    function handleSelected() {
-        setSelected(!selected)
-    }
-
-    return <div className={selected ? 'selected': ''} onClick={handleSelected}>
+function UserDetails({ name, username, email, selected }) {
+    return <div className={selected ? 'selected' : ''}>
         <h2>
             <span>{name}</span>
         </h2>
