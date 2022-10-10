@@ -1,7 +1,7 @@
 import './UserDetails.css'
 
-function UserDetails({ name, username, email, selected }) {
-    return <div className={selected ? 'selected' : ''}>
+function UserDetails({ id, name, username, email, selected, handleSelected }) {
+    return <div className={selected ? 'selected' : ''} onClick={() => handleSelected(id)}>
         <h2>
             <span>{name}</span>
         </h2>
